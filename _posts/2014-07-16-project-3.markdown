@@ -1,0 +1,9 @@
+---
+title: Villa
+layout: default
+modal-id: 3
+img: villa.png
+thumbnail: villa_thumbnail.jpg
+alt: image-alt
+
+---
