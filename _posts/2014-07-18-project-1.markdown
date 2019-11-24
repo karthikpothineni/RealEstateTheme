@@ -1,0 +1,9 @@
+---
+title: Apartment
+layout: default
+modal-id: 1
+img: apartment.png
+thumbnail: apartment_thumbnail.jpg
+alt: image-alt
+
+---

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PVS Constructions</title>
+    <description>pvs constructions. Ongole Top contructions. Low Cost, Reliable and Fast</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 24 Nov 2019 09:45:33 +0530</pubDate>
+    <lastBuildDate>Sun, 24 Nov 2019 09:45:33 +0530</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Apartment</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2014/07/18/project-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/18/project-1/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Independent Building</title>
+        <description>
+</description>
+        <pubDate>Thu, 17 Jul 2014 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2014/07/17/project-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/17/project-2/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Villa</title>
+        <description>
+</description>
+        <pubDate>Wed, 16 Jul 2014 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2014/07/16/project-3/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/16/project-3/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
