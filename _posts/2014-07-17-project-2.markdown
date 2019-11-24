@@ -1,0 +1,9 @@
+---
+title: Independent Building
+layout: default
+modal-id: 2
+img: independent_house.png
+thumbnail: independent_house_thumbnail.jpg
+alt: image-alt
+
+---
