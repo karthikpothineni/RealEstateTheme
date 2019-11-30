@@ -27,15 +27,6 @@ $message = $_POST['message'];
 // $headers .= "Reply-To: $email_address";
 // mail($to,$email_subject,$email_body,$headers);
 
-# Instantiate the client.
-$mgClient = new Mailgun('7553a0bca261a6cd6dec305ff69ffe37-09001d55-6168e1c0');
-$domain = "sandbox944cbbfdb6cf4e8b9f2d35efe828f1f5.mailgun.org";
 
-# Make the call to the client.
-$result = $mgClient->sendMessage("$domain",
-	array('from'    => 'Customer <postmaster@sandbox944cbbfdb6cf4e8b9f2d35efe828f1f5.mailgun.org>',
-		  'to'      => 'Venkata Sai Ram Karthik Pothineni <pvskarthik94@gmail.com>',
-		  'subject' => 'Request for House',
-		  'text'    => 'We got message from $name and details are Email: $email_address, Phone: $phone, Message: $message'));
 return true;
 ?>
