@@ -18,7 +18,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "http://13.235.48.146:8000/contact_me.php",
+                url: "https://cors-anywhere.herokuapp.com/http://13.235.48.146:8000/contact_me.php",
                 type: "POST",
                 dataType: "json",
                 data: {
