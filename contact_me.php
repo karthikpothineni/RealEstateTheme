@@ -1,18 +1,17 @@
 <?php
 require 'vendor/autoload.php';
-use Mailgun\Mailgun;
 
 header("Access-Control-Allow-Origin: *");
 
 // Check for empty fields
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['phone']) 		||
-   empty($_POST['message'])	||
+if(empty($_POST['name'])        ||
+   empty($_POST['email'])       ||
+   empty($_POST['phone'])       ||
+   empty($_POST['message']) ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
-	print "No arguments Provided!";
-	return false;
+    print "No arguments Provided!";
+    return false;
    }
 
 $name = $_POST['name'];
@@ -30,6 +29,19 @@ $message = $_POST['message'];
 // mail($to,$email_subject,$email_body,$headers);
 
 # Instantiate the client.
-
+$email = new \SendGrid\Mail\Mail(); 
+$email->setFrom("postman@pvsconstructions.com", "Customer");
+$email->setSubject("Request for House");
+$email->addTo("xyz@gmail.com");
+$email->addContent("text/plain", "We got message from {$name} and details are Email: {$email_address}, Phone: {$phone}, Message: {$message}");
+$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+try {
+    $response = $sendgrid->send($email);
+    echo $response->statusCode() . "\n";
+    echo ($response->headers());
+    echo $response->body() . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: '. $e->getMessage() ."\n";
+}
 return true;
 ?>
