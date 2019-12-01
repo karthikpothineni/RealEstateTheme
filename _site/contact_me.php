@@ -2,6 +2,7 @@
 require 'vendor/autoload.php';
 
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 // Check for empty fields
 if(empty($_POST['name'])        ||
@@ -32,7 +33,7 @@ $message = $_POST['message'];
 $email = new \SendGrid\Mail\Mail(); 
 $email->setFrom("postman@pvsconstructions.com", "Customer");
 $email->setSubject("Request for House");
-$email->addTo("xyz@gmail.com");
+$email->addTo("karthikpvs94@gmail.com");
 $email->addContent("text/plain", "We got message from {$name} and details are Email: {$email_address}, Phone: {$phone}, Message: {$message}");
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {

@@ -17,18 +17,21 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            $.ajax({
-                url: "https://cors-anywhere.herokuapp.com/http://13.235.48.146:8000/contact_me.php",
-                type: "POST",
-                dataType: "json",
-                data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
-                cache: false,
-            })
+
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('phone', phone);
+            formData.append('email', email);
+            formData.append('message', message);
+            fetch("https://cors-anywhere.herokuapp.com/http://13.235.48.146:8000/contact_me.php" , {
+                method   : 'POST',
+                body     : formData
+            }).then(function (response) {
+                console.log("Mail sent successfully");
+            }).catch(function (err) {
+                console.log("Mail sending failed", err);
+            });
+
             $('#success').html("<div class='alert alert-success'>");
             $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                 .append("</button>");
