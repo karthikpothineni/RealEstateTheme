@@ -23,7 +23,7 @@ $(function() {
             formData.append('phone', phone);
             formData.append('email', email);
             formData.append('message', message);
-            fetch("https://cors-anywhere.herokuapp.com/http://13.235.48.146:8000/contact_me.php" , {
+            fetch("https://infinite-crag-93556.herokuapp.com/contact_me.php" , {
                 method   : 'POST',
                 body     : formData
             }).then(function (response) {
